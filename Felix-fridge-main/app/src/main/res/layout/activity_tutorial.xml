@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tutorial">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="414dp"
+        android:layout_height="729dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="412dp"
+        android:layout_height="727dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="408dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="587dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/download" />
+
+    <TextView
+        android:id="@+id/tutorialTxt"
+        android:layout_width="383dp"
+        android:layout_height="96dp"
+        android:text="Hej alle sammen, mit navn er Felix, og velkommen til mit køkken!   Jeg vil gerne vise jer rundt og fortælle jer, hvordan alt fungerer.   Lad os starte med at kigge på køleskabet! Det er en maskine, der holder maden frisk og kold. Hvis du vil åbne det, skal du bare trykke på det. 1/6 "
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

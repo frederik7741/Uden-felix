@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="openFragment"
+    tools:context=".DiverseFridge">
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="415dp"
+        android:layout_height="918dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31"
+        app:srcCompat="@drawable/fridge_second" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="311dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/Tofu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="116dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/Ketchup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tofu" />
+
+    <ImageView
+        android:id="@+id/Brud"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="116dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rugbrud" />
+
+    <ImageView
+        android:id="@+id/Soup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="116dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Brud"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/soup" />
+
+    <ImageView
+        android:id="@+id/Choco"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="116dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Soup"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chokolate" />
+
+    <ImageView
+        android:id="@+id/Ketchup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="116dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Choco"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ketchup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

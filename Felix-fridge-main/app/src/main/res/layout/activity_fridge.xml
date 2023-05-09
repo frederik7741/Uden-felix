@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FridgeActivity">
+
+
+    <ImageView
+        android:id="@+id/BackgroundFridge"
+        android:layout_width="414dp"
+        android:layout_height="916dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/fridgemain" />
+
+    <Button
+        android:id="@+id/diverse_Button"
+        android:layout_width="81dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="OpenDiverseFridge"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundFridge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <Button
+        android:id="@+id/Dairy"
+        android:layout_width="85dp"
+        android:layout_height="132dp"
+        android:background="@android:color/transparent"
+        android:onClick="OpenDiearyFridge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <Button
+        android:id="@+id/GreensFruit"
+        android:layout_width="82dp"
+        android:layout_height="130dp"
+        android:background="@android:color/transparent"
+        android:onClick="OpenGreensFridge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <Button
+        android:id="@+id/Meat"
+        android:layout_width="93dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:onClick="OpenMeatFridge"
+        app:layout_constraintBottom_toBottomOf="@+id/BackgroundFridge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BackgroundFridge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/egg2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/egg" />
+
+    <ImageView
+        android:id="@+id/steak"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="328dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        android:src="@drawable/beefsteak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/fish"
+        android:layout_width="59dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="328dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fish" />
+
+    <ImageView
+        android:id="@+id/paaleag"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="328dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/madder" />
+
+    <ImageView
+        android:id="@+id/sausage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="328dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sausage" />
+
+    <ImageView
+        android:id="@+id/chicken"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="328dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chicken" />
+
+    <ImageView
+        android:id="@+id/cucumber2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556"
+        app:srcCompat="@drawable/cucumber" />
+
+    <ImageView
+        android:id="@+id/tomato2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546"
+        app:srcCompat="@drawable/tomat" />
+
+    <ImageView
+        android:id="@+id/banana2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546"
+        app:srcCompat="@drawable/banana" />
+
+    <ImageView
+        android:id="@+id/apple2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547"
+        app:srcCompat="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/potato2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546"
+        app:srcCompat="@drawable/kartoffel" />
+
+    <ImageView
+        android:id="@+id/brud"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rugbrud" />
+
+    <ImageView
+        android:id="@+id/ketchup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ketchup" />
+
+    <ImageView
+        android:id="@+id/tofu"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tofu" />
+
+    <ImageView
+        android:id="@+id/choco"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chokolate" />
+
+    <ImageView
+        android:id="@+id/soup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="180dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/soup" />
+
+    <ImageView
+        android:id="@+id/cheese2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ost" />
+
+    <ImageView
+        android:id="@+id/milk2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/maelk" />
+
+    <ImageView
+        android:id="@+id/flude2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/floede" />
+
+    <ImageView
+        android:id="@+id/butter2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="252dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/butter" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="404dp"
+        android:layout_height="514dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

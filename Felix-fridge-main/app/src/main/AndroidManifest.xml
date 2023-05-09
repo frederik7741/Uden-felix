@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Felixfridge"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".Checklist"
+            android:parentActivityName=".MainShop">
+        <meta-data
+            android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+            android:value=".FridgeActivity" />
+        </activity>
+
+        <activity
+            android:name=".DiverseFridge"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".FridgeActivity" />
+        </activity>
+        <activity
+            android:name=".DairyFridge"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".FridgeActivity" />
+        </activity>
+
+        <activity
+            android:name=".ShopList"
+            android:exported="false" />
+        <activity
+            android:name=".Tutorial"
+            android:parentActivityName=".FridgeActivity">
+
+        <meta-data
+            android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+            android:value=".MainScreen" />
+
+       </activity>
+
+        <activity
+            android:name=".GreensFridge"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".FridgeActivity" />
+        </activity>
+        <activity
+            android:name=".MeatFridge"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".FridgeActivity" />
+        </activity>
+        <activity
+            android:name=".DairyShop"
+            android:parentActivityName=".MainShop">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainShop" />
+        </activity>
+        <activity
+            android:name=".DiverseShop"
+            android:parentActivityName=".MainShop">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainShop" />
+        </activity>
+        <activity
+            android:name=".GreensShop"
+            android:parentActivityName=".MainShop">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainShop" />
+        </activity>
+        <activity
+            android:name=".MeatShop"
+            android:parentActivityName=".MainShop">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainShop" />
+        </activity>
+        <activity
+            android:name=".MainShop"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".FridgeActivity" />
+        </activity>
+        <activity
+            android:name=".FridgeActivity"
+            android:parentActivityName=".FridgeActivity">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value=".MainScreen" />
+        </activity>
+        <activity
+            android:name=".MainScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

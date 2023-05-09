@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DairyFridge">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="408dp"
+        android:layout_height="919dp"
+        android:layout_marginStart="1dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.319"
+        app:srcCompat="@drawable/fridge_second" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="311dp"
+        android:layout_height="108dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/Butter"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Cheese"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/butter" />
+
+    <ImageView
+        android:id="@+id/Cheese"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Egg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ost" />
+
+    <ImageView
+        android:id="@+id/Flude"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Butter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/floede" />
+
+    <ImageView
+        android:id="@+id/Milk"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toEndOf="@+id/Flude"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/maelk" />
+
+    <ImageView
+        android:id="@+id/Egg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="128dp"
+        android:clickable="true"
+        android:onClick="openFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/egg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
