@@ -8,4 +8,11 @@
         android:layout_height="60dp"
         android:scaleType="fitCenter" />
 
+    <ImageView
+        android:id="@+id/mascot_animation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
 </RelativeLayout>

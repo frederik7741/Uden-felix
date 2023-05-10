@@ -1,14 +1,20 @@
 package com.example.felix_fridge;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-
+import android.widget.VideoView;
+import android.os.Handler;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,6 +23,8 @@ public class ProductAdapter extends BaseAdapter {
     private List<MainShop.Product> productList;
     private ArrayList<ShoppingListItem> selectedProducts;
     private ShoppingListManager shoppingListManager;
+
+    private AnimationDrawable mascotAnimation;
 
     public ProductAdapter(List<MainShop.Product> productList, ArrayList<ShoppingListItem> selectedProducts, ShoppingListManager shoppingListManager) {
         this.productList = productList;
@@ -55,12 +63,15 @@ public class ProductAdapter extends BaseAdapter {
             imageViewProduct.setImageResource(imageResourceId);
         }
 
+        // Declare animationView here
+        ImageView animationView = convertView.findViewById(R.id.mascot_animation);
+
         // Handle click to add product to the shopping list
+
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Check if the product is already in the shopping list
-             
                 boolean productExists = false;
                 int productIndex = -1;
 
@@ -86,35 +97,55 @@ public class ProductAdapter extends BaseAdapter {
 
                 // Notify the adapter that the data has changed
                 notifyDataSetChanged();
-                FelixAnimation.animateProductClick(v);
+                // Get the FrameLayout from your activity
+                FrameLayout animationContainer = ((Activity) v.getContext()).findViewById(R.id.animationContainer);
 
-            }
-        });
+                if (animationContainer != null) {
+                    // Create a new ImageView and set the product image to it
+                    ImageView animatedImage = new ImageView(v.getContext());
+                    animatedImage.setImageResource(imageResourceId);
 
-        // Handle long press to toggle favorite status
-        convertView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                // Toggle the favorite status of the product
-                product.setFavorite(!product.isFavorite());
+                    // Set the size of the ImageView to match the clicked view
+                    int width = v.getWidth();
+                    int height = v.getHeight();
+                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(width, height);
+                    animatedImage.setLayoutParams(params);
 
-                // Update the favorite status in SharedPreferences
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(v.getContext());
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean("favorite_" + product.getId(), product.isFavorite());
-                editor.apply();
+                    // Set the initial position of the ImageView to match the clicked view
+                    animatedImage.setX(v.getX());
+                    animatedImage.setY(v.getY());
 
-                // Reorder the product list based on favorites
-                Collections.sort(productList, new MainShop.ProductComparator());
+                    // Add the ImageView to the FrameLayout
+                    animationContainer.addView(animatedImage);
 
-                // Notify the adapter that the data has changed
-                notifyDataSetChanged();
+                    // Animate the ImageView to move to the bottom of the screen
+                    animatedImage.animate().translationY(animationContainer.getHeight()).setDuration(1000).withEndAction(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Remove the ImageView from the FrameLayout after the animation is done
+                            animationContainer.removeView(animatedImage);
+                        }
+                    }).start();
+                }
 
-                return true;
+
+
+
+
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        animationView.setVisibility(View.GONE);
+                    }
+                }, 1000);
             }
         });
 
         return convertView;
     }
+
 }
 
