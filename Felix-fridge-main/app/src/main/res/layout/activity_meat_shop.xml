@@ -16,6 +16,13 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="181dp" />
 
+    <FrameLayout
+        android:id="@+id/animationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+
     <ImageView
         android:id="@+id/Background"
         android:layout_width="413dp"

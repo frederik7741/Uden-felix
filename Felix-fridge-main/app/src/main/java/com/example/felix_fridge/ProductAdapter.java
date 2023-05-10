@@ -7,6 +7,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +72,7 @@ public class ProductAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("ProductAdapter", "Product clicked: " + product.getName());
                 // Check if the product is already in the shopping list
                 boolean productExists = false;
                 int productIndex = -1;
@@ -99,38 +101,37 @@ public class ProductAdapter extends BaseAdapter {
                 notifyDataSetChanged();
                 // Get the FrameLayout from your activity
                 FrameLayout animationContainer = ((Activity) v.getContext()).findViewById(R.id.animationContainer);
-
-                if (animationContainer != null) {
-                    // Create a new ImageView and set the product image to it
-                    ImageView animatedImage = new ImageView(v.getContext());
-                    animatedImage.setImageResource(imageResourceId);
-
-                    // Set the size of the ImageView to match the clicked view
-                    int width = v.getWidth();
-                    int height = v.getHeight();
-                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(width, height);
-                    animatedImage.setLayoutParams(params);
-
-                    // Set the initial position of the ImageView to match the clicked view
-                    animatedImage.setX(v.getX());
-                    animatedImage.setY(v.getY());
-
-                    // Add the ImageView to the FrameLayout
-                    animationContainer.addView(animatedImage);
-
-                    // Animate the ImageView to move to the bottom of the screen
-                    animatedImage.animate().translationY(animationContainer.getHeight()).setDuration(1000).withEndAction(new Runnable() {
-                        @Override
-                        public void run() {
-                            // Remove the ImageView from the FrameLayout after the animation is done
-                            animationContainer.removeView(animatedImage);
-                        }
-                    }).start();
-                }
+                Log.d("ProductAdapter", "Animation container: " + animationContainer);
 
 
+                // Create a new ImageView and set the product image to it
+                ImageView animatedImage = new ImageView(v.getContext());
+                animatedImage.setImageResource(imageResourceId);
+
+                // Set the size of the ImageView to match the clicked view
+                int width = v.getWidth();
+                int height = v.getHeight();
+                FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(width, height);
+                animatedImage.setLayoutParams(params);
+
+                // Set the initial position of the ImageView to match the clicked view
+                animatedImage.setX(v.getX());
+                animatedImage.setY(v.getY());
+
+                // Add the ImageView to the FrameLayout
+                Log.d("ProductAdapter", "Child count before adding ImageView: " + animationContainer.getChildCount());
+                animationContainer.addView(animatedImage);
+                Log.d("ProductAdapter", "Child count after adding ImageView: " + animationContainer.getChildCount());
 
 
+                // Animate the ImageView to move to the bottom of the screen
+                animatedImage.animate().translationY(animationContainer.getHeight()).setDuration(1000).withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Remove the ImageView from the FrameLayout after the animation is done
+                        animationContainer.removeView(animatedImage);
+                    }
+                }).start();
 
 
                 Handler handler = new Handler();

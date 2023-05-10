@@ -24,10 +24,6 @@ public class DairyShop extends AppCompatActivity {
     private ArrayList<ShoppingListItem> selectedProducts = new ArrayList<>();
     private ShoppingListManager shoppingListManager;
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +89,4 @@ public class DairyShop extends AppCompatActivity {
         mainShopIntent.putParcelableArrayListExtra("shoppingList", selectedProducts);
         startActivity(mainShopIntent);
     }
-
-
-
 }
