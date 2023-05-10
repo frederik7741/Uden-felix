@@ -68,10 +68,8 @@ public class ThrowOrEat extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d("ThrowOrEat", "Eat button clicked");
-                mVideoView.setVisibility(View.VISIBLE);
-                // Play the video
-                mVideoView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.cook);
-                mVideoView.start();
+
+
 
                 // Remove the VideoView after the video finishes playing
                 mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
